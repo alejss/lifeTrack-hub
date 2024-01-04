@@ -1,0 +1,23 @@
+{
+  "name": "lifetrack-hub",
+  "version": "1.0.0",
+  "description": "Peronal project for track diffenrent information",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejss/lifeTrack-hub.git"
+  },
+  "author": "@alejss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejss/lifeTrack-hub/issues"
+  },
+  "homepage": "https://github.com/alejss/lifeTrack-hub#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
