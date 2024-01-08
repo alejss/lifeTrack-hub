@@ -1,4 +1,4 @@
-import app from './src/app.js'
+import app from './app/app.js'
 
 app.listen(3000, () => {
     console.log('Severt init in PORT: 3000')
