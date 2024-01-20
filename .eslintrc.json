@@ -8,7 +8,15 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "overrides": [
+        {
+            "files": [
+                "src/**/*.ts"
+            ]
+        }
+    ],
     "rules": {
+        "no-console": "warn"
     },
     "ignorePatterns": [
         "dist"
