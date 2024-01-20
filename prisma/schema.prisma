@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model HabitsTrackHistory {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  tags         String[]
+  hours        Int
+  creationDate DateTime
+  habitNameRef HabitNames @relation(fields: [habitNameId], references: [id])
+  habitNameId  String     @db.ObjectId
+}
+
+model HabitNames {
+  id           String               @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  description  String
+  TrackHistory HabitsTrackHistory[]
+  enable       Boolean
+}
+
+model HabitTags {
+  id     String  @id @default(auto()) @map("_id") @db.ObjectId
+  name   String
+  enable Boolean @default(true)
+}
