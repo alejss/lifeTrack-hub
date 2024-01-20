@@ -21,9 +21,11 @@ model HabitNames {
   name         String
   description  String
   TrackHistory HabitsTrackHistory[]
+  enable       Boolean
 }
 
 model HabitTags {
-  id   String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
+  id     String  @id @default(auto()) @map("_id") @db.ObjectId
+  name   String
+  enable Boolean @default(true)
 }
