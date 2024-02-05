@@ -19,6 +19,8 @@
         "no-console": "warn"
     },
     "ignorePatterns": [
-        "dist"
+        "dist",
+        "node_modules",
+        "coverage"
     ]
 }
