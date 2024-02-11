@@ -1,27 +1,21 @@
 {
   "compilerOptions": {
-    "strict": true,
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "composite": true,                                   /* Enable project references. */
     "target": "ES6",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "outDir": "dist",
-    "baseUrl": "./src",
   },
-  "include": [
-    "src/**/*.ts",
-  ],
   "exclude": [
-    "node_modules"
-  ],
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node",
-    "transpileOnly": true
-  }
+    "node_modules",
+    "dist",
+    "test",
+  ]
 }

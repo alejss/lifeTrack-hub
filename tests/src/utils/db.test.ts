@@ -1,4 +1,4 @@
-const { db } = require('../../../src/utils/db.ts');
+import { db } from '../../../src/utils/db';
 
 jest.mock('../../../src/utils/db.ts', () => {
   return {
@@ -10,13 +10,13 @@ jest.mock('../../../src/utils/db.ts', () => {
 
 describe('Database Connection', () => {
   it('should return true when db connection is successful', () => {
-    db.$connect.mockReturnValue(true);
+    (db.$connect as jest.Mock).mockReturnValue(true)
 
     expect(db.$connect()).toBe(true);
   });
 
   it('should return true when db connection fails', () => {
-    db.$connect.mockReturnValue(false);
+    (db.$connect as jest.Mock).mockReturnValue(false)
 
     expect(db.$connect()).toBe(false);
   });
