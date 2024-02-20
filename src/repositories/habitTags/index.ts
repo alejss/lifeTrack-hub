@@ -16,7 +16,7 @@ const findAll = async (): Promise<habitTag[] | []> => {
   return item
 }
 
-const create = async (tag: any): Promise<habitTag> => {
+const create = async (tag: habitTag): Promise<habitTag> => {
   const item = await db.habitTags.create({
     data: tag
   })
